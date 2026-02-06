@@ -10,7 +10,7 @@ fun main(){
     printReceipt(title = gameTitle, originalPrice = price, finalPrice = finalPrice, note = note)
 }
 
-fun calculateDiscount(price: Int) = if (price > 500_000) (price * 0.2).toInt() else (price * 0.1).toInt()
+fun calculateDiscount(price: Int) = if (price > 500_000) (price * 0.8).toInt() else (price * 0.9).toInt()
 
 fun printReceipt(
     title: String,
