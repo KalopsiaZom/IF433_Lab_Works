@@ -29,10 +29,11 @@ fun main(){
 
         if(pilihan == 1){
             enemyHp -= hero.baseDamage.toInt()
+            hero.attack("Musuh")
             println("Sisa HP Musuh yang diserang: $enemyHp")
 
             if ( enemyHp > 0){
-                val enemyDamage = Random.nextInt(10, 20)
+                val enemyDamage = Random.nextInt(10, 21)
                 hero.takeDamage(enemyDamage)
                 println("Musuh membalas dengan damage: $enemyDamage dan sisa HP hero: ${hero.hp}")
             }
