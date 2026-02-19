@@ -2,6 +2,7 @@ package oop_00000116382_bryantmarchiannoj.week03
 
 class Employee(val name: String) {
     var salary: Int = 0
+
     set(value) {
         if (value < 0){
             println("ERROR: Gaji tidak boleh negatif! Di-set ke 0.")
@@ -11,6 +12,7 @@ class Employee(val name: String) {
         }
     }
 
+    val tax: Double get() = salary * 0.1
     private var performanceRating: Int = 0
 
     // Private property
