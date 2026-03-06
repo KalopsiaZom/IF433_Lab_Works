@@ -6,7 +6,7 @@ class CreditCard(
     var usedAmount: Double = 0.0
     ) : PaymentMethod(accountName) {
     override fun processPayment(amount: Double) {
-        if (usedAmount + amount < limit) {
+        if (usedAmount + amount <= limit) {
             usedAmount += amount
             println("Pembayaran selesai. Total saldo terpakai: $usedAmount")
         } else{

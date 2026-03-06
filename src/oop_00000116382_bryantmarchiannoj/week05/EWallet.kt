@@ -5,7 +5,7 @@ class EWallet(
     var balance: Double
 ) : PaymentMethod(accountName) {
     override fun processPayment(amount: Double){
-        if(balance > amount) {
+        if(balance >= amount) {
             balance -= amount
             println("Pembayaran berhasil senilai $amount. Sisa saldo anda adalah $balance")
         } else {
