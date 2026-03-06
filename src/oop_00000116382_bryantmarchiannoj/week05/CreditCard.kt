@@ -8,7 +8,7 @@ class CreditCard(
     override fun processPayment(amount: Double) {
         if (usedAmount + amount <= limit) {
             usedAmount += amount
-            println("Pembayaran selesai. Total saldo terpakai: $usedAmount")
+            println("Pembayaran selesai. Total saldo terpakai: Rp $usedAmount")
         } else{
             println("Pembayaran ditolak. Kartu melebihi limit.")
         }
