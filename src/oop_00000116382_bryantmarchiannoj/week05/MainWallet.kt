@@ -9,7 +9,14 @@ fun main() {
 
     for (payment in payments) {
 
-        payment.processPayment(75000.0)
+        payment.processPayment(75_000.0)
 
+        if (payment is EWallet) {
+            println("Saldo kurang, melakukan top up...")
+            payment.topUp(50_000.0)
+            payment.processPayment(75_000.0)
+        }
+
+        println()
     }
 }
