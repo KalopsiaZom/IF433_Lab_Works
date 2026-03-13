@@ -5,10 +5,10 @@ class SmartLamp(
     override val name: String
 ): SmartDevice, Switchable{
     override fun turnOn() {
-        println("Lamput $name dinyalakan.")
+        println("Lampu $name dinyalakan.")
     }
 
     override fun turnOff() {
-        println("Lamput $name dimatikan.")
+        println("Lampu $name dimatikan.")
     }
 }
