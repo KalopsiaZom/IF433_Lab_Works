@@ -51,4 +51,19 @@ fun main (){
 
     val starterWeapon = Weapon.forgeStarterSword()
     println("Starter Weapon: $starterWeapon")
+
+    println("")
+
+    // Ceritanya pemain pergi ke Blacksmith (Pandai Besi) untuk upgrade senjata wow
+    val upgradedStarterSword = starterWeapon.item.copy(damage = 25)
+
+    println("Weapon setelah upgrade: $upgradedStarterSword")
+
+    println("")
+
+    // Simulasi
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+    processEvent(BattleState.LootDropped(upgradedStarterSword))
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
