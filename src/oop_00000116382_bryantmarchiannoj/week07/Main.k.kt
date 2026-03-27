@@ -39,4 +39,9 @@ fun main (){
         is ApiResponse.Error -> "Munculkan alert: ${response.message}"
     }
     println(uiMessage)
+
+    println("\n=== GAME RPG SEDERHANA ===")
+    // Test singleton
+    GameManager.startGame()
+    GameManager.startGame()
 }
