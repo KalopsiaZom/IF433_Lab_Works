@@ -44,4 +44,11 @@ fun main (){
     // Test singleton
     GameManager.startGame()
     GameManager.startGame()
+
+    println("")
+
+    println("Drop chance LEGENDARY: ${ItemRarity.LEGENDARY.dropChance}%")
+
+    val starterWeapon = Weapon.forgeStarterSword()
+    println("Starter Weapon: $starterWeapon")
 }
