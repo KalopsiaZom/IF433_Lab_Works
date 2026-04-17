@@ -26,4 +26,15 @@ fun main() {
             println("Error parsing data: ${e.message}")
         }
     }
+
+    /*
+    Outputnya:
+    Electronic: Laptop, Warranty: 24
+    Transaction Success: TRX-E01-SUCCESS
+    Clothing: T-Shirt, Size: XL
+    Transaction Success: TRX-C01-SUCCESS
+    Electronic: Mouse, Warranty: 12
+    Transaction Success: TRX-E02-SUCCESS
+    Error parsing data: API Invalid: Missing ID
+     */
 }
