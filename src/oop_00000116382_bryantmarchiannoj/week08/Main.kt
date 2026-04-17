@@ -40,4 +40,5 @@ fun main(){
     // Coba cast ke string, jika gagal (null), ganti dengan "Unknown String"
     val safeString = someObject as? String ?: "Unknown String"
     println("Hasil cast + fallback: $safeString")
+    // Test safe casting worked
 }
