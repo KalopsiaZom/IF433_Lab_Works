@@ -9,4 +9,7 @@ fun main(){
         TradeLog("DOGEUSDT", "SHORT", 5, 8.5, "CLOSED"),
         TradeLog("ETHUSDT", "LONG", 20, 4.2, "OPEN")
     )
+
+    // 3. Pipeline 1: Ekstraksi Data Valid (Filter)
+    val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
 }
