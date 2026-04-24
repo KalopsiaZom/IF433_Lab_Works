@@ -10,6 +10,9 @@ fun main(){
         TradeLog("ETHUSDT", "LONG", 20, 4.2, "OPEN")
     )
 
-    // 3. Pipeline 1: Ekstraksi Data Valid (Filter)
+    // Pipeline 1: Ekstraksi Data Valid (Filter)
     val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
+
+    // Pipeline 2: Memisahkan Winning Trades
+    val winningTrades = closedTrades.filter { it.roe > 0 }
 }
