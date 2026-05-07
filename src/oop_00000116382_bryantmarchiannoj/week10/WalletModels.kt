@@ -1,4 +1,9 @@
 package oop_00000116382_bryantmarchiannoj.week10
 
-data class Coin(val name: String, val balance: Double)
+// Untuk filter pencarian berdasarkan nama
+interface INamedEntity {
+    val name: String
+}
+
+data class Coin(override val name: String, val balance: Double): INamedEntity
 data class Transaction(val id: String, val amount: Double)
