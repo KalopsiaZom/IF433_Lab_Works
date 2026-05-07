@@ -24,4 +24,11 @@ fun main(){
     txRepo.getAll().forEach { tx ->
         println("ID: ${tx.id}\t| Amount: $${tx.amount}")
     }
+
+    // Optional tantangan
+    println("\n--- Search Query Validation ---")
+    val searchResult = coinRepo.findByName("ETH")
+    searchResult.forEach { res ->
+        println("Ditemukan: ${(res as Coin).name} -> Saldo: ${res.balance}")
+    }
 }
